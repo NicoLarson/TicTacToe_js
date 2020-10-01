@@ -1,0 +1,38 @@
+:root {
+  --color-background: #222;
+  --color-font: #fafafa;
+}
+header h1 {
+  background-color: var(--color-background);
+  color: var(--color-font);
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem;
+}
+main section {
+  width: 100%;
+  padding: 2rem 0;
+}
+main ul {
+  display: flex;
+  flex-direction: row;
+  width: 12rem;
+  margin: 0 auto;
+}
+main ul li {
+  height: 4rem;
+  width: 4rem;
+  background-color: blue;
+  border: 1px solid #222;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--color-background);
+}
+footer p {
+  color: var(--color-font);
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+}
