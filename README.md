@@ -1,23 +1,31 @@
 # Tic Tac Toe
 
-## Règles
-Sur une grille 3x3 <br>
-Chaque joueur doit chacun son tour faire une croix ou un rond sur une case de la grille <br>
-Si un joueur fait une ligne avec ses symboles. Il gagne la partie.
-Sinon match null.
+## TODO
 
-## Faire une grille - HTML - CSS
+- Faire une grille - HTML - CSS
+  Ok
+- Associer le tableau JS aux cases HTML
+  Ok
+- Faire une croix puis un rond sur les cases vide
+  Ok
+- Faire un bouton reset
+  Ok
 
-## Faire une croix puis un rond sur les cases vide
-### Assossier le tableau JS aux cases HTML
-## Faire la règle du jeux
+- Une case ne peut être rempli une seul fois
+  Ok
+- Faire la règle du jeux. Condition pour gagner
+- Lorsqu'un joueur à fait une ligne alert("You Win")
+- Enregistrer plusieurs round
+- Donner le score du jeux
 
-## Donner le score du jeux
+## Crée un robot
 
-## Faire plusieurs niveaux
-### Niveau facile
+### Faire plusieurs niveaux
+
+#### Niveau facile
+
 L'ordinateur met aléatoirement son symbole
-### Niveau difficile
-L'ordinateur sait comment gagner
 
-## Possibilité de jouer à 2
+#### Niveau difficile
+
+L'ordinateur sait comment gagner
