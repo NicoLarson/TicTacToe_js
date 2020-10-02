@@ -14,7 +14,9 @@
 - Une case ne peut être rempli une seul fois
   Ok
 - Faire la règle du jeux. Condition pour gagner
+Ok
 - Lorsqu'un joueur à fait une ligne alert("You Win")
+Ok
 - Enregistrer plusieurs round
 - Donner le score du jeux
 
