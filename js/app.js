@@ -78,9 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-
-
-    resetBtn.addEventListener('click', () => {
+    let reset = () => {
         for (let i = 0; i < 9; i++) {
             square[i].position.innerHTML = ""
             square[i].fullOf = "";
@@ -88,7 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
             square[i].position.style.cssText = `background-color :#3498db;`
             whoseTurn = "Your"
         }
+    }
+
+    resetBtn.addEventListener('click', () => {
+        reset()
     })
+
 
     let gameRules = () => {
         if (square[0].fullOf == "X" && square[1].fullOf == "X" && square[2].fullOf == "X") {
@@ -96,60 +99,70 @@ document.addEventListener('DOMContentLoaded', () => {
             square[1].position.style.cssText = `${winColor}`
             square[2].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[3].fullOf == "X" && square[4].fullOf == "X" && square[5].fullOf == "X") {
             square[3].position.style.cssText = `${winColor}`
             square[4].position.style.cssText = `${winColor}`
             square[5].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[6].fullOf == "X" && square[7].fullOf == "X" && square[8].fullOf == "X") {
             square[6].position.style.cssText = `${winColor}`
             square[7].position.style.cssText = `${winColor}`
             square[8].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[0].fullOf == "X" && square[3].fullOf == "X" && square[6].fullOf == "X") {
             square[0].position.style.cssText = `${winColor}`
             square[3].position.style.cssText = `${winColor}`
             square[6].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[1].fullOf == "X" && square[4].fullOf == "X" && square[7].fullOf == "X") {
             square[1].position.style.cssText = `${winColor}`
             square[4].position.style.cssText = `${winColor}`
             square[7].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[2].fullOf == "X" && square[5].fullOf == "X" && square[8].fullOf == "X") {
             square[2].position.style.cssText = `${winColor}`
             square[5].position.style.cssText = `${winColor}`
             square[8].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[0].fullOf == "X" && square[4].fullOf == "X" && square[8].fullOf == "X") {
             square[0].position.style.cssText = `${winColor}`
             square[4].position.style.cssText = `${winColor}`
             square[8].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[2].fullOf == "X" && square[4].fullOf == "X" && square[6].fullOf == "X") {
             square[2].position.style.cssText = `${winColor}`
             square[4].position.style.cssText = `${winColor}`
             square[6].position.style.cssText = `${winColor}`
             alert("X win!")
+            reset()
             console.log("X win!")
         } else if (square[0].fullOf == "O" && square[1].fullOf == "O" && square[2].fullOf == "O") {
             square[0].position.style.cssText = `${loseColor}`
             square[1].position.style.cssText = `${loseColor}`
             square[2].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[3].fullOf == "O" && square[4].fullOf == "O" && square[5].fullOf == "O") {
             square[3].position.style.cssText = `${loseColor}`
             square[4].position.style.cssText = `${loseColor}`
             square[5].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[6].fullOf == "O" && square[7].fullOf == "O" && square[8].fullOf == "O") {
 
@@ -157,39 +170,46 @@ document.addEventListener('DOMContentLoaded', () => {
             square[7].position.style.cssText = `${loseColor}`
             square[8].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[0].fullOf == "O" && square[3].fullOf == "O" && square[6].fullOf == "O") {
             square[0].position.style.cssText = `${loseColor}`
             square[3].position.style.cssText = `${loseColor}`
             square[6].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[1].fullOf == "O" && square[4].fullOf == "O" && square[7].fullOf == "O") {
             square[1].position.style.cssText = `${loseColor}`
             square[4].position.style.cssText = `${loseColor}`
             square[7].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[2].fullOf == "O" && square[5].fullOf == "O" && square[8].fullOf == "O") {
             square[2].position.style.cssText = `${loseColor}`
             square[5].position.style.cssText = `${loseColor}`
             square[8].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[0].fullOf == "O" && square[4].fullOf == "O" && square[8].fullOf == "O") {
             square[0].position.style.cssText = `${loseColor}`
             square[4].position.style.cssText = `${loseColor}`
             square[8].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[2].fullOf == "O" && square[4].fullOf == "O" && square[6].fullOf == "O") {
             square[2].position.style.cssText = `${loseColor}`
             square[4].position.style.cssText = `${loseColor}`
             square[6].position.style.cssText = `${loseColor}`
             alert("O win!")
+            reset()
             console.log("O win!")
         } else if (square[0].isFull == true && square[1].isFull == true && square[2].isFull == true && square[3].isFull == true && square[4].isFull == true && square[5].isFull == true && square[6].isFull == true && square[7].isFull == true && square[8].isFull == true) {
             alert("Draw!")
+            reset()
             console.log("Draw!")
         }
     }
