@@ -17,8 +17,6 @@
 Ok
 - Lorsqu'un joueur à fait une ligne alert("You Win")
 Ok
-- Enregistrer plusieurs round
-- Donner le score du jeux
 
 ## Crée un robot
 
@@ -27,7 +25,8 @@ Ok
 #### Niveau facile
 
 L'ordinateur met aléatoirement son symbole
-
+Robot position = random
 #### Niveau difficile
 
 L'ordinateur sait comment gagner
+
