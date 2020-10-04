@@ -2,7 +2,7 @@
   --color-background: #222;
   --color-font: #fafafa;
 }
-html{
+html {
   height: 100%;
 }
 body {
@@ -12,15 +12,23 @@ body {
   height: 100%;
 }
 /* HEADER */
-header h1 {
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
   background-color: var(--color-background);
   color: var(--color-font);
+}
+header h1 {
   text-transform: uppercase;
   font-size: 4rem;
-  text-align: center;
-  padding: 2rem;
 }
-
+header a {
+  color: var(--color-font);
+}
+header i {
+  font-size: 4rem;
+}
 /* MAIN */
 main {
   height: 100%;
@@ -78,21 +86,26 @@ footer p {
   padding: 2rem;
 }
 
-@media screen and (max-width: 1000px){
-  header h1{
-    font-size: 8rem;
+@media screen and (max-width: 1000px) {
+  header {
     padding: 4rem;
   }
-  main{
+  header h1 {
+    font-size: 8rem;
+  }
+  header i {
+    font-size: 8rem;
+  }
+  main {
     padding: 8rem 0;
   }
-  main ul li{
+  main ul li {
     height: 28vw;
     width: 28vw;
   }
- main input{
-   font-size: 8rem;
-   padding: 2rem;
-   margin: 8rem auto;
- } 
+  main input {
+    font-size: 8rem;
+    padding: 2rem;
+    margin: 8rem auto;
+  }
 }
