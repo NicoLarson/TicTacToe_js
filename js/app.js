@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let whoseTurn = "Your"
 
     let winColor = "background-color:#27ae60;"
-    let loseColor = "background-color:#f7797d;"
 
     let square = [{
         position: tab[0][0],
@@ -92,125 +91,48 @@ document.addEventListener('DOMContentLoaded', () => {
         reset()
     })
 
-
+    let gameWinCondition = (a, b, c, d) => {
+        return (square[a].fullOf == d && square[b].fullOf == d && square[c].fullOf == d)
+    }
+    let gameWinEvent = (a, b, c, d) => {
+        square[a].position.style.cssText = `${winColor}`
+        square[b].position.style.cssText = `${winColor}`
+        square[c].position.style.cssText = `${winColor}`
+        alert(`${d} win!`)
+    }
     let gameRules = () => {
-        if (square[0].fullOf == "X" && square[1].fullOf == "X" && square[2].fullOf == "X") {
-            square[0].position.style.cssText = `${winColor}`
-            square[1].position.style.cssText = `${winColor}`
-            square[2].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[3].fullOf == "X" && square[4].fullOf == "X" && square[5].fullOf == "X") {
-            square[3].position.style.cssText = `${winColor}`
-            square[4].position.style.cssText = `${winColor}`
-            square[5].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[6].fullOf == "X" && square[7].fullOf == "X" && square[8].fullOf == "X") {
-            square[6].position.style.cssText = `${winColor}`
-            square[7].position.style.cssText = `${winColor}`
-            square[8].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[0].fullOf == "X" && square[3].fullOf == "X" && square[6].fullOf == "X") {
-            square[0].position.style.cssText = `${winColor}`
-            square[3].position.style.cssText = `${winColor}`
-            square[6].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[1].fullOf == "X" && square[4].fullOf == "X" && square[7].fullOf == "X") {
-            square[1].position.style.cssText = `${winColor}`
-            square[4].position.style.cssText = `${winColor}`
-            square[7].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[2].fullOf == "X" && square[5].fullOf == "X" && square[8].fullOf == "X") {
-            square[2].position.style.cssText = `${winColor}`
-            square[5].position.style.cssText = `${winColor}`
-            square[8].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[0].fullOf == "X" && square[4].fullOf == "X" && square[8].fullOf == "X") {
-            square[0].position.style.cssText = `${winColor}`
-            square[4].position.style.cssText = `${winColor}`
-            square[8].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[2].fullOf == "X" && square[4].fullOf == "X" && square[6].fullOf == "X") {
-            square[2].position.style.cssText = `${winColor}`
-            square[4].position.style.cssText = `${winColor}`
-            square[6].position.style.cssText = `${winColor}`
-            alert("X win!")
-            reset()
-            console.log("X win!")
-        } else if (square[0].fullOf == "O" && square[1].fullOf == "O" && square[2].fullOf == "O") {
-            square[0].position.style.cssText = `${loseColor}`
-            square[1].position.style.cssText = `${loseColor}`
-            square[2].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[3].fullOf == "O" && square[4].fullOf == "O" && square[5].fullOf == "O") {
-            square[3].position.style.cssText = `${loseColor}`
-            square[4].position.style.cssText = `${loseColor}`
-            square[5].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[6].fullOf == "O" && square[7].fullOf == "O" && square[8].fullOf == "O") {
-
-            square[6].position.style.cssText = `${loseColor}`
-            square[7].position.style.cssText = `${loseColor}`
-            square[8].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[0].fullOf == "O" && square[3].fullOf == "O" && square[6].fullOf == "O") {
-            square[0].position.style.cssText = `${loseColor}`
-            square[3].position.style.cssText = `${loseColor}`
-            square[6].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[1].fullOf == "O" && square[4].fullOf == "O" && square[7].fullOf == "O") {
-            square[1].position.style.cssText = `${loseColor}`
-            square[4].position.style.cssText = `${loseColor}`
-            square[7].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[2].fullOf == "O" && square[5].fullOf == "O" && square[8].fullOf == "O") {
-            square[2].position.style.cssText = `${loseColor}`
-            square[5].position.style.cssText = `${loseColor}`
-            square[8].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[0].fullOf == "O" && square[4].fullOf == "O" && square[8].fullOf == "O") {
-            square[0].position.style.cssText = `${loseColor}`
-            square[4].position.style.cssText = `${loseColor}`
-            square[8].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[2].fullOf == "O" && square[4].fullOf == "O" && square[6].fullOf == "O") {
-            square[2].position.style.cssText = `${loseColor}`
-            square[4].position.style.cssText = `${loseColor}`
-            square[6].position.style.cssText = `${loseColor}`
-            alert("O win!")
-            reset()
-            console.log("O win!")
-        } else if (square[0].isFull == true && square[1].isFull == true && square[2].isFull == true && square[3].isFull == true && square[4].isFull == true && square[5].isFull == true && square[6].isFull == true && square[7].isFull == true && square[8].isFull == true) {
-            alert("Draw!")
-            reset()
-            console.log("Draw!")
+        if (gameWinCondition(0, 1, 2, "X")) {
+            gameWinEvent(0, 1, 2, "X")
+        } else if (gameWinCondition(3, 4, 5, "X")) {
+            gameWinEvent(3, 4, 5, "X")
+        } else if (gameWinCondition(6, 7, 8, "X")) {
+            gameWinEvent(6, 7, 8, "X")
+        } else if (gameWinCondition(0, 3, 6, "X")) {
+            gameWinEvent(0, 3, 6, "X")
+        } else if (gameWinCondition(1, 4, 7, "X")) {
+            gameWinEvent(1, 4, 7, "X")
+        } else if (gameWinCondition(2, 5, 8, "X")) {
+            gameWinEvent(2, 5, 8, "X")
+        } else if (gameWinCondition(0, 4, 8, "X")) {
+            gameWinEvent(0, 4, 8, "X")
+        } else if (gameWinCondition(2, 4, 6, "X")) {
+            gameWinEvent(2, 4, 6, "X")
+        } else if (gameWinCondition(0, 1, 2, "O")) {
+            gameWinEvent(0, 1, 2, "O")
+        } else if (gameWinCondition(3, 4, 5, "O")) {
+            gameWinEvent(3, 4, 5, "O")
+        } else if (gameWinCondition(6, 7, 8, "O")) {
+            gameWinEvent(6, 7, 8, "O")
+        } else if (gameWinCondition(0, 3, 6, "O")) {
+            gameWinEvent(0, 3, 6, "O")
+        } else if (gameWinCondition(1, 4, 7, "O")) {
+            gameWinEvent(1, 4, 7, "O")
+        } else if (gameWinCondition(2, 5, 8, "O")) {
+            gameWinEvent(2, 5, 8, "O")
+        } else if (gameWinCondition(0, 4, 8, "O")) {
+            gameWinEvent(0, 4, 8, "O")
+        } else if (gameWinCondition(2, 4, 6, "O")) {
+            gameWinEvent(2, 4, 6, "O")
         }
     }
 
