@@ -1,32 +1,15 @@
 # Tic Tac Toe
-
+[Lien vers Tic Tac Toe](https://nicolarson.github.io/TicTacToe_js/)
 ## TODO
 
-- Faire une grille - HTML - CSS
-  Ok
-- Associer le tableau JS aux cases HTML
-  Ok
-- Faire une croix puis un rond sur les cases vide
-  Ok
-- Faire un bouton reset
-  Ok
-
-- Une case ne peut être rempli une seul fois
-  Ok
-- Faire la règle du jeux. Condition pour gagner
-Ok
-- Lorsqu'un joueur à fait une ligne alert("You Win")
-Ok
+- [x] Faire une grille - HTML - CSS
+- [x] Associer le tableau JS aux cases HTML
+- [x] Faire une croix puis un rond sur les cases vide
+- [x] Faire un bouton reset
+- [x] Une case ne peut être rempli une seul fois
+- [x] Faire la règle du jeux. Condition pour gagner
+- [x] Lorsqu'un joueur à fait une ligne alert("You Win")
 
 ## Crée un robot
-
-### Faire plusieurs niveaux
-
-#### Niveau facile
-
-L'ordinateur met aléatoirement son symbole
+- [ ] L'ordinateur met aléatoirement son symbole
 Robot position = random
-#### Niveau difficile
-
-L'ordinateur sait comment gagner
-
